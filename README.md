@@ -1,27 +1,55 @@
-# AngularConcept
+# **Angular Learning Modules** 🚀  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+This project contains various Angular concepts, including data binding, directives, lifecycle hooks, forms, observables, and more.  
 
-## Development server
+## **Features** ✨  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+✅ Data Binding (`<app-databinding>`)  
+✅ Directives (`<app-directives>`)  
+✅ Pipes (`<app-pipe>`)  
+✅ Component Communication (`<app-component-communication>`)  
+✅ Router Navigation (`<router-outlet>`)  
+✅ HTTP API Calls (`<app-product>`)  
+✅ Forms:  
+   - Template-Driven (`<app-template-driven>`)  
+   - Reactive Forms (`<app-reactive-forms>`)  
+✅ Lifecycle Hooks:  
+   - `ngOnChanges` (`<app-onchages-on-init>`)  
+   - `ngOnInit`, `ngAfterViewInit`, `ngAfterViewChecked` (`<app-produc>`)  
+   - `ngDoCheck` (`<app-ngdocheack>`)  
+   - `ngAfterContentInit`, `ngAfterContentChecked` (`<app-user>`)  
+   - `ngOnDestroy` (`<app-test>`)  
+✅ Observables (`<app-observable>`)  
+✅ Subjects:  
+   - BehaviorSubject (`<app-auth>`)  
+   - ReplaySubject (`<app-notifications>`)  
+   - AsyncSubject (`<app-data>`)  
+✅ RxJS Operators (`<app-operator>`)  
 
-## Code scaffolding
+## **Installation** 🛠️  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the repository**  
 
-## Build
+   ```sh
+   git clone https://github.com/your-username/todo-app.git
+   cd todo-app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Install dependencies**
 
-## Running unit tests
+   ```sh
+   npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. **Run the development server**
 
-## Running end-to-end tests
+   ```sh
+   ng serve
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Navigate to <http://localhost:4200/> in your browser.
 
-## Further help
+## **Testing** 🧪  
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To run unit tests, execute:  
+
+```sh
+ng test
+
