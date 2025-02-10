@@ -1,0 +1,6 @@
+<div class="auth-container">
+    <h3>{{ isLoggedIn ? 'Welcome, User!' : 'Please Log In' }}</h3>
+    <button (click)="toggleLogin()">
+        {{ isLoggedIn ? 'Logout' : 'Login' }}
+    </button>
+</div>

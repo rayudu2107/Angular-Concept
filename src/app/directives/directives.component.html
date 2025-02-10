@@ -1,0 +1,86 @@
+<!-- ngIf Example -->
+<h1 *ngIf="show">This is a heading</h1>
+
+<!-- ngIf with else condition -->
+<h1 *ngIf="!data; else sample">Loading...</h1>
+<ng-template #sample>
+    {{ data }}
+</ng-template>
+
+<!-- ngIf with then and else -->
+<h1 *ngIf="!data.length; then load; else sample"></h1>
+<ng-template #sample>
+    {{ data }}
+</ng-template>
+<ng-template #load>
+    Loading...
+</ng-template>
+
+<hr>
+
+<!-- ngFor Example -->
+<h2>Movie List</h2>
+<ul>
+    <li *ngFor="let movie of movies">{{ movie }}</li>
+</ul>
+
+<hr>
+
+<!-- ngFor with index, even, odd, first, and last -->
+<table border="1">
+    <tr>
+        <th>Content</th>
+        <th>Index</th>
+        <th>Even</th>
+        <th>Odd</th>
+        <th>First</th>
+        <th>Last</th>
+    </tr>
+    <tr *ngFor="let num of nums; index as i; even as e; odd as o; first as f; last as l">
+        <td>{{ num }}</td>
+        <td>{{ i }}</td>
+        <td>{{ e }}</td>
+        <td>{{ o }}</td>
+        <td>{{ f }}</td>
+        <td>{{ l }}</td>
+    </tr>
+</table>
+
+<hr>
+
+<!-- ngSwitch Example -->
+<h3>Calculator using ngSwitch</h3>
+<input type="text" [(ngModel)]="op" placeholder="Enter operator (+, -, *, /, %)">
+<div [ngSwitch]="op">
+    <div *ngSwitchCase="'+'">{{ num1 }} + {{ num2 }} = {{ num1 + num2 }}</div>
+    <div *ngSwitchCase="'-'">{{ num1 }} - {{ num2 }} = {{ num1 - num2 }}</div>
+    <div *ngSwitchCase="'*'">{{ num1 }} * {{ num2 }} = {{ num1 * num2 }}</div>
+    <div *ngSwitchCase="'/'">{{ num1 }} / {{ num2 }} = {{ num1 / num2 }}</div>
+    <div *ngSwitchCase="'%'">{{ num1 }} % {{ num2 }} = {{ num1 % num2 }}</div>
+    <div *ngSwitchDefault>Invalid Operator</div>
+</div>
+
+<hr>
+
+<!-- Mobile Phones List using ngFor -->
+<h2>Mobile Phones</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price (USD)</th>
+            <th>Color</th>
+            <th>Storage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mobile of mobiles">
+            <td>{{ mobile.brand }}</td>
+            <td>{{ mobile.model }}</td>
+            <td>{{ mobile.price }}</td>
+            <td>{{ mobile.color }}</td>
+            <td>{{ mobile.storage }}</td>
+        </tr>
+    </tbody>
+</table>

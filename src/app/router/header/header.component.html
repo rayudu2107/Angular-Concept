@@ -1,0 +1,52 @@
+<!-- <ul>
+    <li>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+    </li>
+    <li>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </li>
+</ul> -->
+
+<!-- Router outlet to display the routed components -->
+<!-- <router-outlet></router-outlet> -->
+
+<!-- router in services &route parameter -->
+<!-- <nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+
+<!-- Router outlet to display the routed components -->
+<!-- <router-outlet></router-outlet> -->
+
+<div class="navbar">
+    <ul class="menu">
+        <li>
+            <a routerLink="/products" routerLinkActive="active">All Products</a>
+        </li>
+        <li>
+            <a [routerLink]="'/products'" routerLinkActive="active" [queryParams]="{ category: 'men' }">Men</a>
+        </li>
+        <li>
+            <a [routerLink]="'/products'" routerLinkActive="active"
+                [queryParams]="{ category: 'electronics' }">Electronics</a>
+        </li>
+        <li>
+            <a [routerLink]="'/products'" routerLinkActive="active" [queryParams]="{ category: 'women' }">Women</a>
+        </li>
+        <li>
+            <a [routerLink]="'/products'" routerLinkActive="active"
+                [queryParams]="{ category: 'jewelery' }">Jewelery</a>
+        </li>
+    </ul>
+    <!-- <button class="btn-navigate" (click)="navigate()">Navigate</button> -->
+</div> 
+<router-outlet></router-outlet>

@@ -1,0 +1,41 @@
+<!--simple template driven form -->
+<!-- <form action="">
+  <div  ngModelGroup #group="ngModelGroup">
+    UserName: <input required minlength="10" type="text" class="form-control w-50 mt-2" ngModel name="uname" #u="ngModel">
+    Password: <input required minlength="10" type="text" class="form-control w-50 mt-2" ngModel name="pwd" #p="ngModel">
+    <button class="btn btn-primary" (click)="shows(u,p,group)">click</button>
+  </div>
+  {{group.value|json}}
+</form> -->
+
+<!-- template driven form with validators -->
+<form #form="ngForm"> 
+<!-- Username Input -->
+<label for="uname">Username:</label>
+  <input required minlength="8" type="text" class="form-control w-50 mt-2" [ngClass]="{'border-danger': u.touched && u.invalid}" ngModel name="uname" #u="ngModel" />
+  <ng-container *ngIf="u.touched" class="">
+    <p *ngIf="u.errors?.['required']" class="text-danger">Username is required</p>
+    <p *ngIf="u.errors?.['minlength']" class="text-danger">Username must be at least 8 characters</p>
+  </ng-container>
+
+<!-- Password Input -->
+<label for="pwd" class="mt-3">Password:</label>
+  <input required minlength="8" type="text" class="form-control w-50 mt-2" [ngClass]="{'border-danger': u.touched && u.invalid}" ngModel name="pwd" #p="ngModel" />
+  <ng-container *ngIf="p.touched">
+    <p *ngIf="p.errors?.['required']" class="text-danger">Password is required</p>
+    <p *ngIf="p.errors?.['minlength']" class="text-danger">Password must be at least 8 characters</p>
+  </ng-container>
+
+<!-- Submit Button -->
+ <button class="btn btn-primary mt-3" (click)="submitForm(u, p, form)" type="button">
+    Submit
+  </button>
+</form>
+
+
+<!-- setvalue patchvalue -->
+<!-- <form action="" #form="ngForm">
+    UserName: <input type="text" class="form-control w-50 mt-2" ngModel name="uname" #u="ngModel">
+    Password: <input  type="text" class="form-control w-50 mt-2" ngModel name="pwd" #p="ngModel">
+    <button class="btn btn-primary" (click)="show(form)">click</button>
+</form> -->

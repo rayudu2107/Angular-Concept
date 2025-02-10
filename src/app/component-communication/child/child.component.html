@@ -1,0 +1,15 @@
+<!-- <p>app-child-header works!</p>
+<p>{{ childtitle }}</p>
+<p>{{ d1 }}</p>
+<p>{{ d2 }}</p> -->
+
+<!-- Child to parent using Output decorator -->
+<input type="text" (input)="updatemessage($event)" placeholder="Enter a message" />
+<button (click)="passtoParent()">Send</button>
+<div>Input: {{ message }}</div>
+
+<!-- Child to parent using Template Reference Variable -->
+<!-- <input type="text" [(ngModel)]="data"> -->
+
+<!-- Child to parent using ViewChild decorator -->
+<!-- <input type="text" [(ngModel)]="data"> -->

@@ -1,0 +1,25 @@
+<p>Component Communication Works!</p>
+
+<!-- Parent to child using Input decorator -->
+<!-- <p>app-child-header works!</p>
+<app-child [childtitle]="ctitle" [d1]="detail" [d2]="parr"></app-child> -->
+
+<!-- Child to parent using Output decorator -->
+<div>Parent data: {{ cdata }}</div>
+<app-child (custoeve)="cdata = $event"></app-child>
+<app-child (custoeve)="updatecdata($event)"></app-child>
+
+<!-- Child to parent using Template Reference Variable -->
+<!-- <div *ngIf="childComponent">Parent from child: {{ childComponent.test() }}</div>
+<div *ngIf="childComponent">Parent data from child: {{ childComponent.data }}</div>
+<app-child #childComponent></app-child> -->
+
+<!-- Child to parent using ViewChild decorator -->
+<!-- <div *ngIf="testDiv">parent:{{ testDiv.nativeElement.textContent }}</div> 
+<div>Data from child: {{ cdata }}</div> -->
+
+<!-- DOM Manipulation using ViewChild -->
+<!-- <div #test>This is a div</div>
+<button (click)="changediv()">Change Div Text</button>
+
+<input type="text" #test1 placeholder="Type something..."> -->

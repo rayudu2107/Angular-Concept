@@ -1,0 +1,7 @@
+<div class="notification-container">
+    <h3> Notifications</h3>
+    <button (click)="sendNotification()">Send Notification</button>
+    <ul>
+        <li *ngFor="let notification of notifications">{{ notification }}</li>
+    </ul>
+</div>

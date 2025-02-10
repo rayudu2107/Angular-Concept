@@ -1,0 +1,33 @@
+<!-- String Interpolation -->
+<h1>{{ message }}</h1>
+<h1>Sum: {{ 5 + 5 }}</h1>
+<h1 class="{{ cname }}">{{ message }}</h1>
+<h1>Date: {{ d }}</h1>
+<h1>Time: {{ t }}</h1>
+
+<!-- Property Binding -->
+<input type="text" placeholder="Enter name">
+<hr>
+<input type="number" [hidden]="isHidden">
+<hr>
+<button [disabled]="isDisabled">Submit</button>
+
+<!-- Class Binding -->
+<h1 [class.active]="isActive">Class Binding Example</h1>
+
+<!-- Style Binding -->
+<h1 [style.color]="cvar">Styled Text</h1>
+<h1 [style.color]="hasError ? 'red' : 'green'">Conditional Style</h1>
+
+<!-- Event Binding -->
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<h1>Counter: {{ counter }}</h1>
+
+<!-- Event Binding with Input -->
+<input type="text" (input)="changeName($event)">
+<h1>Your Name: {{ name }}</h1>
+
+<!-- Two-way Data Binding -->
+City: <input type="text" [(ngModel)]="city">
+<h1>Your City: {{ city }}</h1>

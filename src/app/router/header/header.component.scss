@@ -1,0 +1,99 @@
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(138, 128, 128);
+    height: 40px;
+}
+
+a {
+    line-height: 40px;
+    color: white;
+    margin: 0 20px;
+    padding: 10px 10px;
+}
+
+.active {
+    background-color: rgb(124, 114, 101);
+}
+
+/* Base Styles */
+/* Base Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    width: 89%;
+    /* Consistent spacing between all items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a,
+.btn-navigate {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.menu a.active,
+.menu a:hover,
+.btn-navigate:hover {
+    background-color: #ff4081;
+    color: white;
+}
+
+.btn-navigate {
+    background-color: #ff4081;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        /* Adjust gap for smaller screens */
+    }
+
+    .menu li {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .menu a,
+    .btn-navigate {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}

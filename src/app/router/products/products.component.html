@@ -1,0 +1,14 @@
+<div class="cards">
+    <div *ngFor="let p of products">
+        <div class="card-header">
+            <img [src]="p.image" alt="Image" class="image" />
+            <div class="info">
+                <p class="name">{{ p.title.slice(0, 15) }}</p>
+                <p class="profile-desc">{{ (p.price * 70) | currency:'INR':'symbol' }}</p>
+                <div class="action">
+                    <button class="btn btn-pink">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

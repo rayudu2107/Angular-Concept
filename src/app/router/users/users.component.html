@@ -1,0 +1,6 @@
+<div *ngFor="let u of users" class="card">
+    <span>{{ u.name }}</span>
+    <span>
+        <a [routerLink]="['/usercard', u.id]" routerLinkActive="active">Profile</a>
+    </span>
+</div>

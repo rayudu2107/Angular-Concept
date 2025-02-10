@@ -1,0 +1,74 @@
+/* Main card container */
+.card {
+    max-width: 250px;
+    /* Reduced the width */
+    margin: 15px auto;
+    /* Reduced margin */
+    padding: 15px;
+    /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Profile image styling */
+.card img {
+    width: 120px;
+    /* Reduced width */
+    height: 120px;
+    /* Reduced height */
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    object-fit: cover;
+    margin-bottom: 10px;
+    /* Reduced margin */
+}
+
+/* User details container */
+.details {
+    margin: 8px 0;
+    /* Reduced margin */
+}
+
+/* User name styling */
+#name {
+    font-size: 18px;
+    /* Reduced font size */
+    font-weight: bold;
+    color: #333333;
+    margin: 5px 0;
+}
+
+/* Info paragraph styling */
+#info {
+    font-size: 12px;
+    /* Reduced font size */
+    color: #666666;
+    margin: 10px 0;
+    /* Reduced margin */
+}
+
+/* Row container for additional details */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    /* Reduced margin */
+    font-size: 12px;
+    /* Reduced font size */
+    color: #444444;
+}
+
+/* Data styling within rows */
+.data {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Hover effects for interactivity */
+.card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}

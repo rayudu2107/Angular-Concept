@@ -1,0 +1,49 @@
+<h2>Angular Pipes Example</h2>
+
+<!-- Currency Pipe -->
+<p><strong>Currency Pipe:</strong> {{ amount | currency:'USD' }}</p>
+
+<!-- Date Pipe -->
+<p><strong>Date Pipe:</strong> {{ today | date:'fullDate' }}</p>
+
+<!-- Decimal Pipe -->
+<p><strong>Decimal Pipe:</strong> {{ decimalNumber | number:'1.2-2' }}</p>
+
+<!-- Percentage Pipe -->
+<p><strong>Percentage Pipe:</strong> {{ percentage | percent }}</p>
+
+<!-- JSON Pipe -->
+<p><strong>JSON Pipe:</strong> {{ jsonData | json }}</p>
+
+<!-- Lowercase & Uppercase Pipes -->
+<p><strong>Lowercase Pipe:</strong> {{ text | lowercase }}</p>
+<p><strong>Uppercase Pipe:</strong> {{ text | uppercase }}</p>
+
+<!-- Async Pipe -->
+<p><strong>Async Pipe:</strong> {{ asyncData$ | async }}</p>
+
+<!-- Custom Pipe Example -->
+<p><strong>Custom Pipe:</strong> {{ text | customPipe }}</p>
+
+<!-- Async pipe -->
+ <p>Async pipe</p>
+<div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users | async">
+          <td>{{ user.id }}</td>
+          <td>{{ user.title }}</td>
+          <td>{{ user.body.slice(0, 20) }}...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
